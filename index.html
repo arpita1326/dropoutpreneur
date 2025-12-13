@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dropoutpreneur</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Dropoutpreneur</div>
+    <nav>
+      <ul>
+        <li><a href="features.html">More Features</a></li>
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#traits">Traits</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="Home">
+    <div class="hero-content">
+      <h1>WELCOME TO DROPOUTPRENEUR</h1>
+      <p>Turning Ideas into Income 🚀</p>
+      <button class="btn">Get Started</button>
+    </div>
+    <div class="hero-image">
+      <img src="download.png" alt="Entrepreneur Illustration">
+    </div>
+  </section>
+
+  <!-- Traits & Benefits -->
+  <div class="container">
+    <h2 id="traits">Key Traits:</h2>
+    <ul>    
+      <li>Innovative thinking</li>
+      <li>Risk-taking ability</li>
+      <li>Resilience and adaptability</li>
+      <li>Passion for entrepreneurship</li>
+    </ul>
+
+    <h2>Benefits:</h2>
+    <ul>
+      <li>Freedom to pursue own ideas</li>
+      <li>Potential for financial independence</li>
+      <li>Opportunity to create something new and impactful</li>
+    </ul>
+
+    <button class="btn">Learn More</button>
+
+    <!-- Resource Cards -->
+    <h2>Resources for Dropoutpreneurs</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>Startup Ideas</h3>
+
+        <a href="abhi.html" class="btn">View Ideas</a>
+      </div>
+
+      <div class="card">
+        <h3>Mentorship</h3>
+        <p>Get guidance from experienced entrepreneurs who started their own journey.</p>
+        <button class="btn">Learn More</button>
+      </div>
+
+      <div class="card">
+        <h3>Funding</h3>
+        <p>Learn how to secure funding from investors and crowdfunding platforms.</p>
+        <button class="btn">Learn More</button>
+      </div>
+
+      <div class="card">
+        <h3>Networking Opportunities</h3>
+        <p>Connect with like-minded individuals and potential collaborators.</p>
+        <button class="btn">Learn More</button>
+      </div>
+
+      <div class="card">
+        <h3>Skill Development</h3>
+        <p>Access courses and workshops to enhance your entrepreneurial skills.</p>
+        <button class="btn">Learn More</button>
+      </div>
+     
+    <!-- Testimonials -->
+    <h2 id="testimonials">What Our Dropoutpreneurs Say:</h2>
+    <div class="testimonial">
+      <img src="man.jpg" alt="Testimonial Image">
+      <div>
+        <p>"Dropping out of college was the best decision I ever made. It allowed me to focus on my passion and create something truly innovative."</p>
+        <p><strong>- John Doe</strong>, Founder of XYZ Startup</p>
+      </div>
+    </div>
+
+    <div class="testimonial">
+      <img src="download.jpg" alt="Testimonial Image">
+      <div>
+        <p>"As a dropoutpreneur, I've learned to think outside the box and take calculated risks. It's been a wild ride, but I wouldn't trade it for anything."</p>
+        <p><strong>- Rose Smith</strong>, CEO of ABC Company</p>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <h2 id="contact">Get Started Today!</h2>
+    <form id="contactForm">
+      <input type="text" id="name" name="name" placeholder="Enter your name"><br>
+      <input type="email" id="email" name="email" placeholder="Enter your email"><br>
+      <button class="btn">Submit</button>
+    </form>
+
+    <!-- Dark Mode Button -->
+    <button id="darkModeToggle" class="btn">🌙 Dark Mode</button>
+
+    <!-- FAQ Section -->
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <div class="faq-item">
+        <p class="faq-question">❓ What is a Dropoutpreneur?</p>
+        <p class="faq-answer">A dropoutpreneur is someone who dropped out of school/college but built a business successfully.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-question">❓ Can I succeed without a degree?</p>
+        <p class="faq-answer">Yes! Many successful entrepreneurs like Steve Jobs & Mark Zuckerberg proved that ideas matter more than degrees.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-question">❓ Do you provide mentorship?</p>
+        <p class="faq-answer">Yes, we connect aspiring entrepreneurs with experienced mentors.</p>
+      </div>
+    </div>
+
+    <button class="btn">Explore More FAQs</button>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Dropoutpreneur | All Rights Reserved</p>
+    <div class="socials">
+      <a href="#">🌐</a>
+      <a href="#">📘</a>
+      <a href="#">🐦</a>
+      <a href="#">📸</a>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Smooth Scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth"
+        });
+      });
+    });
+
+    // Form Validation
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      let name = document.getElementById("name").value.trim();
+      let email = document.getElementById("email").value.trim();
+      if (name === "" || email === "") {
+        e.preventDefault();
+        alert("Please fill in both name and email before submitting.");
+      } else {
+        alert("Thank you for contacting us, " + name + "!");
+      }
+    });
+
+    // FAQ Toggle
+    document.querySelectorAll(".faq-question").forEach(question => {
+      question.addEventListener("click", function() {
+        this.nextElementSibling.classList.toggle("show");
+      });
+    });
+
+    // Dark Mode Toggle
+    document.getElementById("darkModeToggle").addEventListener("click", function() {
+      document.body.classList.toggle("dark");
+      this.textContent = document.body.classList.contains("dark")
+        ? "☀️ Light Mode"
+        : "🌙 Dark Mode";
+    });
+  </script>
+<div id="storyModal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Share Your Story</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required><br><br>
+      <input type="text" placeholder="Your Startup / Idea" required><br><br>
+      <textarea placeholder="Your Story..." rows="5" required></textarea><br><br>
+      <button class="btn" type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<style>
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+</style>
+
+<script>
+// Smooth scrolling for navbar links
+document.querySelectorAll('nav ul li a').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    if(target){
+      window.scrollTo({
+        top: target.offsetTop - 70, // adjust for navbar
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+
+// FAQ collapsible
+const faqItems = document.querySelectorAll('#faq ul li');
+faqItems.forEach(item => {
+  const question = item.querySelector('strong');
+  item.style.cursor = 'pointer';
+  item.addEventListener('click', () => {
+    const answer = item.querySelector('br').nextSibling;
+    if(answer){
+      if(answer.nodeValue.includes('display:block')) return; // skip if already shown
+    }
+    item.querySelectorAll('p, br').forEach(p => {
+      p.style.display = p.style.display === 'none' ? 'block' : 'none';
+    });
+  });
+});
+
+// Share Story Modal
+const modal = document.getElementById("storyModal");
+const btn = document.querySelector(".share-story-btn");
+const span = document.querySelector(".close");
+
+btn.onclick = function() {
+  modal.style.display = "flex";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+</body>
+</html>
