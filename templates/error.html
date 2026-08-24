@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block title %}{{ code }} | DROPoutpreneur{% endblock %}{% block content %}<section class="error-page"><div class="error-code">{{ code }}</div><p class="kicker">A small detour</p><h1>{{ message }}</h1><a class="button" href="{{ url_for('dashboard') if current_user else url_for('home') }}">Return home -></a></section>{% endblock %}
